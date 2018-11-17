@@ -11,7 +11,7 @@ import java.util.GregorianCalendar;
 //Puedo no crear un metodo construcotor, en ese caso utilizamos el contructor por defecto
 //nos menejamos solo por Getters y Setters
 
-public class Empleado implements Comparable{
+public class Empleado implements Comparable, Trabajadores {
 
 //la interfaz Comaparable nos obliga a reescribir el metodo compareTo    
     
@@ -79,7 +79,7 @@ public class Empleado implements Comparable{
     }
     
     public String getDatos(){
-                                                                     //utilizo a la clase para llamar el metodo static
+                                                                                               //utilizo a la clase para llamar el metodo static
     return "Id: "+id+" ,Nombre: "+nombre+"Seccion: "+seccion+" Fecha de alta: "+altaContrato+", "+Empleado.getIdSgte();
 
     }
@@ -114,6 +114,13 @@ public class Empleado implements Comparable{
     
         //en cualquier otro caso 0 
         return 0;
+    }
+    
+    @Override
+    public double getBono(double gratificacion){
+        
+        return Trabajadores.bonus_base+gratificacion;
+        
     }
     
        //Declaro variables después del constructor. diferencia con la programaciÓn ESTRUCTURADA 
