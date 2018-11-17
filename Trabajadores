@@ -1,0 +1,20 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package banco;
+
+/**
+ *
+ * @author Usuario
+ */
+public interface Trabajadores {
+    
+    //public abstarct es opcional
+    public abstract double getBono(double gratificacio);
+    
+    //vaible estatica o constante
+    //public static final es opcional
+    public static final double bonus_base=1500;    
+}
